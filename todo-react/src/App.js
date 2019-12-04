@@ -1,26 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import Header from "./components/Header/Header";
 import './App.css';
+import ToDoCard from './components/TodoCard/TodoCard';
+import CssBaseline from "@material-ui/core/CssBaseline";
+import Typography from "@material-ui/core/Typography";
+import Container from "@material-ui/core/Container";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return(
+      <React.Fragment>
+        <CssBaseline />
+        <Container maxWidth="lg">
+          <Typography 
+            component="div" 
+            className="generalContainer" 
+            style={{backgroundColor: "#cfe8fc", height: "100vh"}}>
+              <ToDoCard />
+          </Typography>
+        </Container>
+      </React.Fragment>
+    );
+  }
 }
 
 export default App;
