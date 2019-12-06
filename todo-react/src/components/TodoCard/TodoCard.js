@@ -24,7 +24,7 @@ const useStyles = makeStyles({
     }
 });
 
-export default function ToDoCard() {
+export default function ToDoCard(props) {
     const classes = useStyles();
     const bull = <span className={classes.bullet}>•</span>;
 
@@ -36,7 +36,7 @@ export default function ToDoCard() {
                     Todo Item!
                 </Typography>
                 <Typography variant="h5" component="h2">
-                    {bull} Buy new guitar
+                    {bull} {props.item}
                 </Typography>
             </CardContent>
             <CardActions>

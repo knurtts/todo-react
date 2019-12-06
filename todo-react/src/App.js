@@ -5,6 +5,7 @@ import ToDoCard from './components/TodoCard/TodoCard';
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
+import AddNew from './components/AddNew/AddNew';
 
 class App extends Component {
   render() {
@@ -16,7 +17,8 @@ class App extends Component {
             component="div" 
             className="generalContainer" 
             style={{backgroundColor: "#cfe8fc", height: "100vh"}}>
-              <ToDoCard />
+              <AddNew />
+              <ToDoCard item="Learn to shred!"/>
           </Typography>
         </Container>
       </React.Fragment>
